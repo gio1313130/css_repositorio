@@ -76,6 +76,72 @@ body{
 .card h3{margin:0 0 .5rem}
 .card p{margin:0;color:var(--muted)}
 
+/* efecto decorativo en cada tarjeta */
+.card::after{
+	content:"";
+	display:block;
+	height:2px;
+	width:50px;
+	background:var(--accent);
+	margin-top:.5rem;
+}
+
+/* extras: formulario, imagen y lista */
+.extras{margin:2rem 0}
+.extras h2{text-align:center;margin-bottom:1rem;color:var(--accent)}
+
+.signup-form{
+	display:flex;
+	flex-wrap:wrap;
+	gap:1rem;
+	background:#fff;
+	padding:1rem;
+	border-radius:.5rem;
+	box-shadow:0 1px 4px rgba(0,0,0,0.05);
+}
+.signup-form label{
+	flex:1 1 200px;
+	display:flex;
+	flex-direction:column;
+	font-size:.9rem;
+	color:var(--text);
+}
+.signup-form input,
+.signup-form select{
+	padding:.5rem;
+	border:1px solid #ccc;
+	border-radius:.25rem;
+	margin-top:.25rem;
+	transition:border-color .2s;
+}
+.signup-form input:focus,
+.signup-form select:focus{
+	border-color:var(--accent);
+	outline:none;
+}
+
+.image-demo{text-align:center;margin-top:1rem}
+.image-demo img{
+	width:100%;
+	max-width:300px;
+	border-radius:.5rem;
+	filter:grayscale(50%);
+	transition:filter .3s, transform .3s;
+}
+.image-demo img:hover{
+	filter:grayscale(0);
+	transform:rotate(2deg) scale(1.02);
+}
+
+.list-demo{list-style:none;padding:0;display:flex;gap:.5rem;justify-content:center}
+.list-demo li{position:relative;padding:0 .8rem}
+.list-demo li::before{content:'•';position:absolute;left:0;color:var(--accent)}
+
+/* animaciones y transiciones generales */
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+.btn{transition:transform .2s}
+.btn:hover{transform:scale(1.05);animation:pulse .4s}
+
 /* Footer */
 .site-footer{
 	padding:1.5rem 0;
