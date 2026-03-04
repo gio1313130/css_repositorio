@@ -146,6 +146,36 @@ body{
 .btn{transition:transform .2s}
 .btn:hover{transform:scale(1.05);animation:pulse .4s}
 
+/* Herencia de estilos */
+.inheritance{
+	margin:2rem 0;
+	background:rgba(255,255,255,0.05);
+	padding:1rem;
+	border-radius:.5rem;
+	color:var(--text);
+}
+.inheritance .parent{
+	color:var(--accent);
+	font-size:1.2rem;
+	line-height:1.4;
+}
+.inheritance .parent p{
+	margin:0 0 .5rem;
+}
+.inheritance .child{
+	margin-left:1rem;
+	padding:0.5rem;
+	border-left:2px solid var(--accent);
+}
+.inheritance .child span{
+	/* heredará el color del padre (inherit) */
+	color:inherit;
+}
+.inheritance .child .override{
+	color:#fff; /* anula la herencia */
+	font-size:initial; /* restablece tamaño por defecto */
+}
+
 /* Footer */
 .site-footer{
 	padding:1.5rem 0;
