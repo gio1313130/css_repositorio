@@ -1,9 +1,9 @@
 :root{
-	--bg: #f7f8fb;
-	--card: #ffffff;
-	--accent: #4f46e5;
-	--muted: #6b7280;
-	--text: #0f172a;
+	--bg: #0a0a23; /* deep space blue */
+	--card: #1a1a2e; /* dark card background */
+	--accent: #03a9f4; /* neon blue */
+	--muted: #bbc2e0; /* soft gray/blue */
+	--text: #eceff4; /* light text */
 }
 
 /* Box sizing + reset */
@@ -11,8 +11,8 @@
 html,body{height:100%}
 body{
 	margin:0;
-	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-	background:var(--bg);
+	font-family: "Orbitron", sans-serif, Inter, system-ui, -apple-system, "Segoe UI";
+	background:var(--bg) url('https://www.transparenttextures.com/patterns/stardust.png');
 	color:var(--text);
 	line-height:1.5;
 }
@@ -24,8 +24,8 @@ body{
 
 /* Header */
 .site-header{
-	background:linear-gradient(90deg, #eef2ff, #ffffff);
-	border-bottom:1px solid rgba(15,23,42,0.04);
+	background:linear-gradient(90deg, #0a0a23, #1a1a2e);
+	border-bottom:1px solid rgba(255,255,255,0.1);
 }
 .header-inner{
 	display:flex;
@@ -33,32 +33,35 @@ body{
 	justify-content:space-between;
 	padding:1rem 0;
 }
-.logo{margin:0;font-size:1.25rem}
+.logo{margin:0;font-size:1.5rem;color:var(--accent);font-weight:bold}
 .main-nav a{
-	color:var(--muted);
+	color:var(--text);
 	text-decoration:none;
 	margin-left:1rem;
 	font-weight:500;
 }
-.main-nav a:hover{color:var(--accent)}
+.main-nav a:hover{color:var(--accent);text-decoration:underline}
 
 /* Hero */
 .hero{
-	background:linear-gradient(180deg,transparent,rgba(15,23,42,0.02));
+	background:linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/diagmonds.png');
+	background-size:cover;
 	padding:3rem 0;
 	text-align:center;
 }
-.hero h2{margin:0 0 .5rem;font-size:2rem}
-.hero p{margin:0 0 1rem;color:var(--muted)}
+.hero h2{margin:0 0 .5rem;font-size:2rem;color:#fff}
+.hero p{margin:0 0 1rem;color:#ddd}
 .btn{
 	display:inline-block;
 	background:var(--accent);
-	color:#fff;
+	color:#000;
 	padding:.6rem 1rem;
 	border-radius:.5rem;
 	text-decoration:none;
+	box-shadow:0 0 10px var(--accent);
 }
-.btn:hover{opacity:0.95}
+.btn:hover{opacity:0.9;transform:scale(1.1);}
+
 
 /* Cards */
 .cards{
@@ -71,7 +74,8 @@ body{
 	background:var(--card);
 	padding:1rem;
 	border-radius:.5rem;
-	box-shadow:0 1px 3px rgba(2,6,23,0.04);
+	box-shadow:0 2px 6px rgba(0,0,0,0.5);
+    border:1px solid rgba(255,255,255,0.1);
 }
 .card h3{margin:0 0 .5rem}
 .card p{margin:0;color:var(--muted)}
