@@ -192,6 +192,97 @@ body{
 .self-center{align-self:center}
 .push-right{margin-left:auto;align-self:flex-end}
 
+/* Demo interactiva de Flexbox */
+.live-flexbox{
+	margin-top:1.2rem;
+	padding:1rem;
+	border-radius:.7rem;
+	border:1px solid rgba(255,255,255,0.12);
+	background:rgba(0,0,0,0.25);
+}
+.live-flexbox h3{
+	margin:.2rem 0 .35rem;
+	color:#f2f7ff;
+}
+.live-flexbox p{
+	margin:0 0 .9rem;
+	color:var(--muted);
+}
+.live-controls{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+	gap:.75rem;
+	align-items:end;
+	margin-bottom:1rem;
+}
+.live-controls label{
+	display:block;
+	font-size:.85rem;
+	font-weight:600;
+	color:#d7e8ff;
+	margin-bottom:.35rem;
+}
+.live-controls select{
+	width:100%;
+	padding:.55rem;
+	border-radius:.4rem;
+	border:1px solid rgba(255,255,255,0.2);
+	background:#0e183f;
+	color:#ecf3ff;
+}
+.live-controls select:focus{
+	outline:none;
+	border-color:var(--accent);
+	box-shadow:0 0 0 2px rgba(3,169,244,0.2);
+}
+.lab-reset{
+	width:100%;
+	text-align:center;
+	height:42px;
+	line-height:1;
+	border:none;
+	cursor:pointer;
+}
+.live-stage{
+	display:flex;
+	height:170px;
+	padding:.65rem;
+	border-radius:.55rem;
+	border:1px dashed rgba(255,255,255,0.25);
+	background:
+		linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+		linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+		rgba(8,14,35,0.95);
+	background-size:24px 24px;
+	gap:.6rem;
+	overflow:auto;
+}
+.live-box{
+	width:68px;
+	min-width:68px;
+	height:68px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	font-size:1.1rem;
+	font-weight:700;
+	border-radius:.55rem;
+	color:#03131d;
+	background:linear-gradient(160deg, #9ae6ff, #2cc7ff);
+	box-shadow:0 3px 10px rgba(3,169,244,0.3);
+}
+.live-css{
+	margin-top:.85rem;
+	padding:.55rem .65rem;
+	font-family:Consolas, "Courier New", monospace;
+	font-size:.9rem;
+	background:rgba(3,169,244,0.14);
+	border:1px solid rgba(3,169,244,0.25);
+	border-radius:.4rem;
+	color:#dff5ff;
+	word-break:break-word;
+}
+
 /* extras: formulario, imagen y lista */
 .extras{margin:2rem 0}
 .extras h2{text-align:center;margin-bottom:1rem;color:var(--accent)}
@@ -293,5 +384,7 @@ body{
 	.main-nav a{margin-left:.6rem}
 	.alignment-row{min-height:86px}
 	.chip{width:50px;height:50px}
+	.live-stage{height:190px}
+	.live-box{width:60px;min-width:60px;height:60px}
 }
 

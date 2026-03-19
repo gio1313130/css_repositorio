@@ -120,6 +120,48 @@
 						</div>
 					</article>
 				</div>
+
+				<div class="live-flexbox">
+					<h3>Prueba interactiva</h3>
+					<p>Ajusta los controles para observar la alineación en vivo.</p>
+
+					<div class="live-controls">
+						<label for="jc-control">justify-content</label>
+						<select id="jc-control">
+							<option value="flex-start">flex-start</option>
+							<option value="center" selected>center</option>
+							<option value="space-between">space-between</option>
+							<option value="space-around">space-around</option>
+							<option value="space-evenly">space-evenly</option>
+						</select>
+
+						<label for="ai-control">align-items</label>
+						<select id="ai-control">
+							<option value="flex-start">flex-start</option>
+							<option value="center" selected>center</option>
+							<option value="flex-end">flex-end</option>
+							<option value="stretch">stretch</option>
+							<option value="baseline">baseline</option>
+						</select>
+
+						<label for="wrap-control">flex-wrap</label>
+						<select id="wrap-control">
+							<option value="nowrap">nowrap</option>
+							<option value="wrap" selected>wrap</option>
+						</select>
+
+						<button type="button" class="btn lab-reset" id="reset-flex-demo">Restablecer</button>
+					</div>
+
+					<div class="live-stage" id="live-stage">
+						<div class="live-box">1</div>
+						<div class="live-box">2</div>
+						<div class="live-box">3</div>
+						<div class="live-box">4</div>
+					</div>
+
+					<p class="live-css" id="live-css-output">justify-content: center; align-items: center; flex-wrap: wrap;</p>
+				</div>
 			</section>
 
 			<!-- Sección para demostrar herencia de estilos -->
@@ -140,6 +182,41 @@
 				<p>© 2026 Universo • Hecho con ❤️</p>
 			</div>
 		</footer>
+
+		<script>
+			(function () {
+				var stage = document.getElementById("live-stage");
+				var jc = document.getElementById("jc-control");
+				var ai = document.getElementById("ai-control");
+				var wrap = document.getElementById("wrap-control");
+				var resetBtn = document.getElementById("reset-flex-demo");
+				var cssOutput = document.getElementById("live-css-output");
+
+				if (!stage || !jc || !ai || !wrap || !resetBtn || !cssOutput) return;
+
+				function applyFlexValues() {
+					stage.style.justifyContent = jc.value;
+					stage.style.alignItems = ai.value;
+					stage.style.flexWrap = wrap.value;
+					cssOutput.textContent =
+						"justify-content: " + jc.value + "; align-items: " + ai.value + "; flex-wrap: " + wrap.value + ";";
+				}
+
+				function resetFlexValues() {
+					jc.value = "center";
+					ai.value = "center";
+					wrap.value = "wrap";
+					applyFlexValues();
+				}
+
+				jc.addEventListener("change", applyFlexValues);
+				ai.addEventListener("change", applyFlexValues);
+				wrap.addEventListener("change", applyFlexValues);
+				resetBtn.addEventListener("click", resetFlexValues);
+
+				applyFlexValues();
+			})();
+		</script>
 	</body>
 </html>
 
