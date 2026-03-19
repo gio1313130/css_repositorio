@@ -14,11 +14,12 @@ body{
 	font-family: "Orbitron", sans-serif, Inter, system-ui, -apple-system, "Segoe UI";
 	background:var(--bg) url('https://www.transparenttextures.com/patterns/stardust.png');
 	color:var(--text);
-	line-height:1.5;
+	line-height:1.6;
+	letter-spacing:.01em;
 }
 
 .container{
-	width:min(1100px,92%);
+	width:min(1120px,92%);
 	margin:0 auto;
 }
 
@@ -39,8 +40,10 @@ body{
 	text-decoration:none;
 	margin-left:1rem;
 	font-weight:500;
+	padding:.2rem .1rem;
+	transition:color .2s ease, text-shadow .2s ease;
 }
-.main-nav a:hover{color:var(--accent);text-decoration:underline}
+.main-nav a:hover{color:var(--accent);text-decoration:underline;text-shadow:0 0 8px rgba(3,169,244,0.35)}
 
 /* Hero */
 .hero{
@@ -49,8 +52,8 @@ body{
 	padding:3rem 0;
 	text-align:center;
 }
-.hero h2{margin:0 0 .5rem;font-size:2rem;color:#fff}
-.hero p{margin:0 0 1rem;color:#ddd}
+.hero h2{margin:0 0 .5rem;font-size:clamp(1.7rem,3.2vw,2.35rem);color:#fff;letter-spacing:.02em}
+.hero p{margin:0 auto 1rem;color:#ddd;max-width:620px}
 .btn{
 	display:inline-block;
 	background:var(--accent);
@@ -60,7 +63,6 @@ body{
 	text-decoration:none;
 	box-shadow:0 0 10px var(--accent);
 }
-.btn:hover{opacity:0.9;transform:scale(1.1);}
 
 
 /* Cards */
@@ -68,7 +70,7 @@ body{
 	display:grid;
 	grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 	gap:1rem;
-	margin:2rem 0 4rem 0;
+	margin:2.2rem 0 4rem 0;
 }
 .card{
 	background:var(--card);
@@ -76,7 +78,9 @@ body{
 	border-radius:.5rem;
 	box-shadow:0 2px 6px rgba(0,0,0,0.5);
     border:1px solid rgba(255,255,255,0.1);
+	transition:transform .2s ease, box-shadow .2s ease;
 }
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(0,0,0,0.35)}
 .card h3{margin:0 0 .5rem}
 .card p{margin:0;color:var(--muted)}
 
@@ -92,7 +96,7 @@ body{
 
 /* Flexbox */
 .flex-demo{
-	margin:2rem 0;
+	margin:2.4rem 0;
 	padding:1rem;
 	background:rgba(255,255,255,0.05);
 	border-radius:.5rem;
@@ -260,7 +264,7 @@ body{
 .live-box{
 	width:68px;
 	min-width:68px;
-	height:68px;
+	min-height:68px;
 	display:flex;
 	align-items:center;
 	justify-content:center;
@@ -294,14 +298,14 @@ body{
 	background:#fff;
 	padding:1rem;
 	border-radius:.5rem;
-	box-shadow:0 1px 4px rgba(0,0,0,0.05);
+	box-shadow:0 4px 12px rgba(0,0,0,0.12);
 }
 .signup-form label{
 	flex:1 1 200px;
 	display:flex;
 	flex-direction:column;
 	font-size:.9rem;
-	color:var(--text);
+	color:#1a1a2e;
 }
 .signup-form input,
 .signup-form select{
@@ -309,6 +313,7 @@ body{
 	border:1px solid #ccc;
 	border-radius:.25rem;
 	margin-top:.25rem;
+	background:#fcfdff;
 	transition:border-color .2s;
 }
 .signup-form input:focus,
@@ -337,7 +342,7 @@ body{
 /* animaciones y transiciones generales */
 @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
 .btn{transition:transform .2s}
-.btn:hover{transform:scale(1.05);animation:pulse .4s}
+.btn:hover{opacity:0.9;transform:scale(1.05);animation:pulse .4s}
 
 /* Herencia de estilos */
 .inheritance{
@@ -375,16 +380,17 @@ body{
 	border-top:1px solid rgba(15,23,42,0.04);
 	text-align:center;
 	color:var(--muted);
+	font-size:.95rem;
 }
 
 /* Responsive tweaks */
 @media (max-width:600px){
 	.hero h2{font-size:1.5rem}
-	.header-inner{padding:0.75rem 0}
+	.header-inner{padding:0.75rem 0;flex-wrap:wrap;gap:.45rem}
 	.main-nav a{margin-left:.6rem}
 	.alignment-row{min-height:86px}
 	.chip{width:50px;height:50px}
 	.live-stage{height:190px}
-	.live-box{width:60px;min-width:60px;height:60px}
+	.live-box{width:60px;min-width:60px;min-height:60px}
 }
 
