@@ -3,356 +3,285 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>Práctica CSS - Estructura básica</title>
+		<title>Universo | Agencia de Viajes Orbitales</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header class="site-header">
 			<div class="container header-inner">
-				<h1 class="logo">Universo</h1>
-				<nav class="main-nav">
-					<a href="#">Inicio</a>
-					<a href="#">Acerca</a>
-					<a href="#">Contacto</a>
+				<a class="logo" href="#inicio">Universo</a>
+				<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+				<nav class="main-nav" id="main-nav" aria-label="Navegacion principal">
+					<a href="#servicios">Servicios</a>
+					<a href="#destinos">Destinos</a>
+					<a href="#planificador">Planificador</a>
+					<a href="#contacto">Contacto</a>
 				</nav>
 			</div>
 		</header>
 
-		<main class="container">
+		<main id="inicio">
 			<section class="hero">
-				<h2>Bienvenido a la práctica de CSS</h2>
-				<p>Aprende a crear estructuras limpias y estilos básicos.</p>
-				<a class="btn" href="#">Empezar</a>
-			</section>
-
-			<section class="cards">
-				<article class="card">
-					<h3>Card 1</h3>
-					<p>Descripción breve del contenido o característica.</p>
-				</article>
-				<article class="card">
-					<h3>Card 2</h3>
-					<p>Descripción breve del contenido o característica.</p>
-				</article>
-				<article class="card">
-					<h3>Card 3</h3>
-					<p>Descripción breve del contenido o característica.</p>
-				</article>
-			</section>
-
-			<!-- Sección para demostrar Flexbox -->
-			<section class="flex-demo">
-				<h2>Demostración de Flexbox</h2>
-				<div class="flex-container">
-					<div class="flex-item order-2">Item 1</div>
-					<div class="flex-item order-1">Item 2</div>
-					<div class="flex-item">Item 3</div>
-					<div class="flex-item order-3">Item 4</div>
-				</div>
-				<p class="flex-notes">Usa <code>justify-content</code>, <code>align-items</code> y <code>flex-wrap</code> para controlar la disposición. Cambia el orden con <code>order</code>.</p>
-			</section>
-
-			<!-- Sección adicional para demostrar más propiedades CSS -->
-			<section class="extras">
-				<h2>Más ejemplos espaciales</h2>
-				<!-- Formulario con varios tipos de controles -->
-				<form class="signup-form">
-					<label>Nombre del astronauta:
-						<input type="text" name="name" placeholder="Tu nombre" />
-					</label>
-					<label>Email:
-						<input type="email" name="email" placeholder="astro@ejemplo.com" />
-					</label>
-					<label>Tipo de nave:
-						<select name="ship">
-							<option value="">Selecciona</option>
-							<option value="falcon">Falcon</option>
-							<option value="enterprise">Enterprise</option>
-							<option value="serenity">Serenity</option>
-						</select>
-					</label>
-					<button type="submit" class="btn">Enviar misión</button>
-				</form>
-
-				<!-- Demostración de imagen con efectos y filtros -->
-				<div class="image-demo">
-					<img src="https://via.placeholder.com/300" alt="Imagen de demostración" />
-				</div>
-
-				<!-- Lista personalizada -->
-				<ul class="list-demo">
-					<li>Mercurio</li>
-					<li>Venus</li>
-					<li>Tierra</li>
-				</ul>
-			</section>
-
-			<!-- Sección práctica para alinear elementos con Flexbox -->
-			<section class="flex-alignment-lab">
-				<h2>Laboratorio de alineación con Flexbox</h2>
-				<p class="lab-intro">Compara cómo cambian la posición y distribución de los elementos con distintas combinaciones de propiedades.</p>
-
-				<div class="alignment-grid">
-					<article class="alignment-card">
-						<h3>justify-content: space-between</h3>
-						<div class="alignment-row jc-between">
-							<div class="chip">A</div>
-							<div class="chip">B</div>
-							<div class="chip">C</div>
+				<div class="container hero-grid">
+					<div>
+						<p class="eyebrow">Turismo espacial para principiantes y exploradores</p>
+						<h1>Planifica tu primera mision orbital en menos de 5 minutos</h1>
+						<p class="hero-copy">
+							Somos una agencia educativa y turistica que combina formacion, simulacion y viajes en capsula
+							suborbital con soporte real antes, durante y despues del vuelo.
+						</p>
+						<div class="hero-actions">
+							<a class="btn" href="#planificador">Disenar mision</a>
+							<a class="btn btn-ghost" href="#destinos">Ver destinos</a>
 						</div>
-					</article>
+						<ul class="hero-metrics">
+							<li><strong>1,240+</strong> viajeros entrenados</li>
+							<li><strong>98%</strong> satisfaccion de mision</li>
+							<li><strong>24/7</strong> soporte en cabina</li>
+						</ul>
+					</div>
 
-					<article class="alignment-card">
-						<h3>align-items: flex-end</h3>
-						<div class="alignment-row ai-end">
-							<div class="chip tall">A</div>
-							<div class="chip">B</div>
-							<title>Universo | Agencia de Viajes Orbitales</title>
-							<link rel="preconnect" href="https://fonts.googleapis.com" />
-							<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-							<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-						</div>
-					</article>
+					<aside class="hero-panel" aria-label="Resumen de estado de vuelos">
+						<h2>Estado de vuelos hoy</h2>
+						<ul>
+							<li><span>Orbital basica</span><strong>Disponible</strong></li>
+							<li><span>Luna panoramica</span><strong>Ultimas 3 plazas</strong></li>
+							<li><span>Laboratorio ISS</span><strong>Lista de espera</strong></li>
+						</ul>
+						<p class="panel-note">Ventana de lanzamiento mas proxima: <b>viernes, 07:30 UTC</b>.</p>
+					</aside>
+				</div>
+			</section>
 
-					<article class="alignment-card">
-						<h3>align-self + margen automático</h3>
-									<a class="logo" href="#inicio">Universo</a>
-									<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
-									<nav class="main-nav" id="main-nav" aria-label="Navegación principal">
-										<a href="#servicios">Servicios</a>
-										<a href="#destinos">Destinos</a>
-										<a href="#planificador">Planificador</a>
-										<a href="#contacto">Contacto</a>
+			<section class="section container" id="servicios">
+				<div class="section-head">
+					<h2>Servicios con aplicacion practica</h2>
+					<p>Todo esta pensado para que el visitante pueda elegir, comparar y reservar una experiencia real.</p>
+				</div>
+				<div class="feature-grid">
+					<article class="feature-card">
+						<h3>Evaluacion previa</h3>
+						<p>Diagnostico de condicion fisica y tolerancia G para asignar el tipo de mision adecuado.</p>
+					</article>
+					<article class="feature-card">
+						<h3>Entrenamiento inmersivo</h3>
+						<p>Simulador de cabina, protocolos de emergencia y comunicacion de equipo en entorno controlado.</p>
+					</article>
+					<article class="feature-card">
+						<h3>Asistencia de viaje</h3>
+						<p>Documentacion, traslado a base, coordinacion medica y seguimiento posterior al vuelo.</p>
 					</article>
 				</div>
+			</section>
 
-				<div class="live-flexbox">
-							<main id="inicio">
-								<section class="hero">
-									<div class="container hero-grid">
-										<div>
-											<p class="eyebrow">Turismo espacial para principiantes y exploradores</p>
-											<h1>Planifica tu primera misión orbital en menos de 5 minutos</h1>
-											<p class="hero-copy">Somos una agencia educativa y turística que combina formación, simulación y viajes en cápsula suborbital con soporte real antes, durante y después del vuelo.</p>
-											<div class="hero-actions">
-												<a class="btn" href="#planificador">Diseñar misión</a>
-												<a class="btn btn-ghost" href="#destinos">Ver destinos</a>
-											</div>
-											<ul class="hero-metrics">
-												<li><strong>1.240+</strong> viajeros entrenados</li>
-												<li><strong>98%</strong> satisfacción de misión</li>
-												<li><strong>24/7</strong> soporte en cabina</li>
-											</ul>
-										</div>
+			<section class="section section-alt" id="destinos">
+				<div class="container">
+					<div class="section-head">
+						<h2>Destinos y paquetes</h2>
+						<p>Compara duracion, intensidad y precio para elegir una mision acorde a tu perfil.</p>
+					</div>
+					<div class="destination-grid">
+						<article class="destination-card">
+							<img
+								src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80"
+								alt="Vista orbital de la Tierra"
+								loading="lazy"
+							/>
+							<div class="destination-content">
+								<h3>Orbital Express</h3>
+								<p>Vuelo suborbital con 8 minutos de microgravedad para primera experiencia.</p>
+								<ul>
+									<li>Duracion: 1 dia</li>
+									<li>Intensidad: Baja</li>
+									<li>Desde: $18,000</li>
+								</ul>
+							</div>
+						</article>
 
-										<aside class="hero-panel" aria-label="Resumen de estado de vuelos">
-											<h2>Estado de vuelos hoy</h2>
-											<ul>
-												<li><span>Orbital básica</span><strong>Disponible</strong></li>
-												<li><span>Luna panorámica</span><strong>Últimas 3 plazas</strong></li>
-												<li><span>Laboratorio ISS</span><strong>Lista de espera</strong></li>
-											</ul>
-											<p class="panel-note">Ventana de lanzamiento más próxima: <b>viernes, 07:30 UTC</b>.</p>
-										</aside>
-									</div>
-						<select id="jc-control">
-							<option value="flex-start">flex-start</option>
-								<section class="section container" id="servicios">
-									<div class="section-head">
-										<h2>Servicios con aplicación práctica</h2>
-										<p>Todo está pensado para que el visitante pueda elegir, comparar y reservar una experiencia real.</p>
-									</div>
-									<div class="feature-grid">
-										<article class="feature-card">
-											<h3>Evaluación previa</h3>
-											<p>Diagnóstico de condición física y tolerancia G para asignar el tipo de misión adecuado.</p>
-										</article>
-										<article class="feature-card">
-											<h3>Entrenamiento inmersivo</h3>
-											<p>Simulador de cabina, protocolos de emergencia y comunicación de equipo en entorno controlado.</p>
-										</article>
-										<article class="feature-card">
-											<h3>Asistencia de viaje</h3>
-											<p>Documentación, traslado a base, coordinación médica y seguimiento posterior al vuelo.</p>
-										</article>
-									</div>
-								</section>
+						<article class="destination-card">
+							<img
+								src="https://images.unsplash.com/photo-1537420327992-d6e192287183?auto=format&fit=crop&w=1200&q=80"
+								alt="Superficie lunar con contraste de sombras"
+								loading="lazy"
+							/>
+							<div class="destination-content">
+								<h3>Luna Panoramica</h3>
+								<p>Trayecto orbital lunar con observacion guiada y modulo de fotografia astronomica.</p>
+								<ul>
+									<li>Duracion: 4 dias</li>
+									<li>Intensidad: Media</li>
+									<li>Desde: $67,500</li>
+								</ul>
+							</div>
+						</article>
 
-								<section class="section section-alt" id="destinos">
-									<div class="container">
-										<div class="section-head">
-											<h2>Destinos y paquetes</h2>
-											<p>Compara duración, intensidad y precio para elegir una misión acorde a tu perfil.</p>
-										</div>
-										<div class="destination-grid">
-											<article class="destination-card">
-												<img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80" alt="Vista orbital de la Tierra" loading="lazy" />
-												<div class="destination-content">
-													<h3>Orbital Express</h3>
-													<p>Vuelo suborbital con 8 minutos de microgravedad para primera experiencia.</p>
-													<ul>
-														<li>Duración: 1 día</li>
-														<li>Intensidad: Baja</li>
-														<li>Desde: $18,000</li>
-													</ul>
-												</div>
-											</article>
+						<article class="destination-card">
+							<img
+								src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+								alt="Estacion espacial orbitando la Tierra"
+								loading="lazy"
+							/>
+							<div class="destination-content">
+								<h3>Estacion Orbital Lab</h3>
+								<p>Programa extendido con practicas cientificas en gravedad reducida y mentoria tecnica.</p>
+								<ul>
+									<li>Duracion: 10 dias</li>
+									<li>Intensidad: Alta</li>
+									<li>Desde: $120,000</li>
+								</ul>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
 
-											<article class="destination-card">
-												<img src="https://images.unsplash.com/photo-1537420327992-d6e192287183?auto=format&fit=crop&w=1200&q=80" alt="Superficie lunar con contraste de sombras" loading="lazy" />
-												<div class="destination-content">
-													<h3>Luna Panorámica</h3>
-													<p>Trayecto orbital lunar con observación guiada y módulo de fotografía astronómica.</p>
-													<ul>
-														<li>Duración: 4 días</li>
-														<li>Intensidad: Media</li>
-														<li>Desde: $67,500</li>
-													</ul>
-												</div>
-											</article>
+			<section class="section container" id="planificador">
+				<div class="section-head">
+					<h2>Planificador rapido de mision</h2>
+					<p>Calcula una estimacion de presupuesto y nivel recomendado segun tu experiencia.</p>
+				</div>
 
-											<article class="destination-card">
-												<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Estación espacial orbitando la Tierra" loading="lazy" />
-												<div class="destination-content">
-													<h3>Estación Orbital Lab</h3>
-													<p>Programa extendido con prácticas científicas en gravedad reducida y mentoría técnica.</p>
-													<ul>
-														<li>Duración: 10 días</li>
-														<li>Intensidad: Alta</li>
-														<li>Desde: $120,000</li>
-													</ul>
-												</div>
-											</article>
-										</div>
-									</div>
-								</section>
+				<div class="planner-layout">
+					<form class="planner-form" aria-label="Formulario de planificacion de mision">
+						<label>
+							Tipo de mision
+							<select id="mission-type">
+								<option value="18000">Orbital Express</option>
+								<option value="67500">Luna Panoramica</option>
+								<option value="120000">Estacion Orbital Lab</option>
+							</select>
+						</label>
 
-								<section class="section container" id="planificador">
-									<div class="section-head">
-										<h2>Planificador rápido de misión</h2>
-										<p>Calcula una estimación de presupuesto y nivel recomendado según tu experiencia.</p>
-									</div>
+						<label>
+							Cantidad de pasajeros: <span id="passengers-value">2</span>
+							<input id="passengers" type="range" min="1" max="6" value="2" />
+						</label>
 
-									<div class="planner-layout">
-										<form class="planner-form" aria-label="Formulario de planificación de misión">
-											<label>Tipo de misión
-												<select id="mission-type">
-													<option value="18000">Orbital Express</option>
-													<option value="67500">Luna Panorámica</option>
-													<option value="120000">Estación Orbital Lab</option>
-												</select>
-											</label>
+						<label>
+							Tu experiencia previa
+							<select id="experience-level">
+								<option value="0">Ninguna</option>
+								<option value="-500">Simulacion previa</option>
+								<option value="-1500">Vuelo suborbital previo</option>
+							</select>
+						</label>
 
-											<label>Cantidad de pasajeros
-												<input id="passengers" type="range" min="1" max="6" value="2" />
-											</label>
+						<button class="btn" type="button" id="estimate-btn">Calcular estimacion</button>
+					</form>
 
-											<label>Tu experiencia previa
-												<select id="experience-level">
-													<option value="0">Ninguna</option>
-													<option value="-500">Simulación previa</option>
-													<option value="-1500">Vuelo suborbital previo</option>
-												</select>
-											</label>
+					<aside class="planner-result" aria-live="polite">
+						<h3>Resumen de mision</h3>
+						<p id="result-summary">Selecciona tus opciones y pulsa calcular.</p>
+						<p class="result-total" id="result-total">$0</p>
+						<ul>
+							<li>Incluye entrenamiento de seguridad</li>
+							<li>Seguro medico basico incluido</li>
+							<li>Opciones premium disponibles al confirmar</li>
+						</ul>
+					</aside>
+				</div>
+			</section>
 
-											<button class="btn" type="button" id="estimate-btn">Calcular estimación</button>
-										</form>
+			<section class="section container mission-flow">
+				<div class="section-head">
+					<h2>Como funciona tu viaje</h2>
+					<p>Ruta clara desde la reserva hasta el regreso para reducir incertidumbre del cliente.</p>
+				</div>
+				<ol class="flow-steps">
+					<li><strong>Reserva y validacion</strong><span>Confirmamos fecha, salud y documentacion.</span></li>
+					<li><strong>Entrenamiento</strong><span>Practica en simulador, protocolos y adaptacion.</span></li>
+					<li><strong>Lanzamiento</strong><span>Mision guiada con control en tiempo real.</span></li>
+					<li><strong>Retorno y seguimiento</strong><span>Monitoreo post-vuelo y entrega de reportes.</span></li>
+				</ol>
+			</section>
 
-										<aside class="planner-result" aria-live="polite">
-											<h3>Resumen de misión</h3>
-											<p id="result-summary">Selecciona tus opciones y pulsa calcular.</p>
-											<p class="result-total" id="result-total">$0</p>
-											<ul>
-												<li>Incluye entrenamiento de seguridad</li>
-												<li>Seguro médico básico incluido</li>
-												<li>Opciones premium disponibles al confirmar</li>
-											</ul>
-										</aside>
-									</div>
-								</section>
+			<section class="section section-alt" id="contacto">
+				<div class="container contact-wrap">
+					<div>
+						<h2>Habla con un asesor de mision</h2>
+						<p>Atencion personalizada para grupos, empresas y experiencias educativas.</p>
+						<p><strong>Email:</strong> contacto@universo.space</p>
+						<p><strong>Telefono:</strong> +34 900 321 778</p>
+					</div>
+					<form class="contact-form" aria-label="Formulario de contacto">
+						<label>
+							Nombre
+							<input type="text" placeholder="Tu nombre" />
+						</label>
+						<label>
+							Correo
+							<input type="email" placeholder="tu@email.com" />
+						</label>
+						<label>
+							Mensaje
+							<textarea rows="4" placeholder="Cuentanos que tipo de mision quieres planificar"></textarea>
+						</label>
+						<button class="btn" type="submit">Enviar consulta</button>
+					</form>
+				</div>
+			</section>
+		</main>
 
-								<section class="section container mission-flow">
-									<div class="section-head">
-										<h2>Cómo funciona tu viaje</h2>
-										<p>Ruta clara desde la reserva hasta el regreso para reducir incertidumbre del cliente.</p>
-									</div>
-									<ol class="flow-steps">
-										<li><strong>Reserva y validación</strong><span>Confirmamos fecha, salud y documentación.</span></li>
-										<li><strong>Entrenamiento</strong><span>Práctica en simulador, protocolos y adaptación.</span></li>
-										<li><strong>Lanzamiento</strong><span>Misión guiada con control en tiempo real.</span></li>
-										<li><strong>Retorno y seguimiento</strong><span>Monitoreo post-vuelo y entrega de reportes.</span></li>
-									</ol>
-								</section>
+		<footer class="site-footer">
+			<div class="container footer-inner">
+				<p>© <span id="current-year">2026</span> Universo. Sitio de practica HTML + CSS responsive.</p>
+				<a href="#inicio">Volver arriba</a>
+			</div>
+		</footer>
 
-								<section class="section section-alt" id="contacto">
-									<div class="container contact-wrap">
-										<div>
-											<h2>Habla con un asesor de misión</h2>
-											<p>Atención personalizada para grupos, empresas y experiencias educativas.</p>
-											<p><strong>Email:</strong> contacto@universo.space</p>
-											<p><strong>Teléfono:</strong> +34 900 321 778</p>
-										</div>
-										<form class="contact-form" aria-label="Formulario de contacto">
-											<label>Nombre
-												<input type="text" placeholder="Tu nombre" />
-											</label>
-											<label>Correo
-												<input type="email" placeholder="tu@email.com" />
-											</label>
-											<label>Mensaje
-												<textarea rows="4" placeholder="Cuéntanos qué tipo de misión quieres planificar"></textarea>
-											</label>
-											<button class="btn" type="submit">Enviar consulta</button>
-										</form>
-									</div>
-								</section>
-							</main>
+		<script>
+			(function () {
+				var menuToggle = document.querySelector(".menu-toggle");
+				var nav = document.getElementById("main-nav");
+				var estimateBtn = document.getElementById("estimate-btn");
+				var missionType = document.getElementById("mission-type");
+				var passengers = document.getElementById("passengers");
+				var passengerValue = document.getElementById("passengers-value");
+				var experience = document.getElementById("experience-level");
+				var resultSummary = document.getElementById("result-summary");
+				var resultTotal = document.getElementById("result-total");
+				var year = document.getElementById("current-year");
 
-							<footer class="site-footer">
-								<div class="container footer-inner">
-									<p>© <span id="current-year">2026</span> Universo. Diseño para práctica de HTML + CSS responsive.</p>
-									<a href="#inicio">Volver arriba</a>
-								</div>
-							</footer>
+				if (year) year.textContent = String(new Date().getFullYear());
 
-							<script>
-								(function () {
-									var menuToggle = document.querySelector(".menu-toggle");
-									var nav = document.getElementById("main-nav");
-									var estimateBtn = document.getElementById("estimate-btn");
-									var missionType = document.getElementById("mission-type");
-									var passengers = document.getElementById("passengers");
-									var experience = document.getElementById("experience-level");
-									var resultSummary = document.getElementById("result-summary");
-									var resultTotal = document.getElementById("result-total");
-									var year = document.getElementById("current-year");
+				if (menuToggle && nav) {
+					menuToggle.addEventListener("click", function () {
+						var isOpen = nav.classList.toggle("is-open");
+						menuToggle.setAttribute("aria-expanded", String(isOpen));
+					});
+				}
 
-									if (year) year.textContent = String(new Date().getFullYear());
+				if (passengers && passengerValue) {
+					passengers.addEventListener("input", function () {
+						passengerValue.textContent = passengers.value;
+					});
+				}
 
-									if (menuToggle && nav) {
-										menuToggle.addEventListener("click", function () {
-											var isOpen = nav.classList.toggle("is-open");
-											menuToggle.setAttribute("aria-expanded", String(isOpen));
-										});
-									}
+				if (estimateBtn && missionType && passengers && experience && resultSummary && resultTotal) {
+					estimateBtn.addEventListener("click", function () {
+						var missionValue = Number(missionType.value);
+						var passengerCount = Number(passengers.value);
+						var experienceDiscount = Number(experience.value);
+						var subtotal = missionValue * passengerCount;
+						var total = Math.max(subtotal + experienceDiscount, 0);
 
-									if (estimateBtn && missionType && passengers && experience && resultSummary && resultTotal) {
-										estimateBtn.addEventListener("click", function () {
-											var missionValue = Number(missionType.value);
-											var passengerCount = Number(passengers.value);
-											var experienceDiscount = Number(experience.value);
-											var subtotal = missionValue * passengerCount;
-											var total = Math.max(subtotal + experienceDiscount, 0);
-
-											resultSummary.textContent =
-												"Misión para " +
-												passengerCount +
-												" pasajero(s) con ajuste por experiencia de $" +
-												Math.abs(experienceDiscount) +
-												".";
-											resultTotal.textContent = "$" + total.toLocaleString("en-US");
-										});
-									}
-								})();
-							</script>
+						resultSummary.textContent =
+							"Mision para " +
+							passengerCount +
+							" pasajero(s) con ajuste por experiencia de $" +
+							Math.abs(experienceDiscount) +
+							".";
+						resultTotal.textContent = "$" + total.toLocaleString("en-US");
+					});
+				}
+			})();
+		</script>
+	</body>
+</html>
 
