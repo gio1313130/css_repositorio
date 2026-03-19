@@ -518,6 +518,80 @@ body{
 	font-size:initial; /* restablece tamaño por defecto */
 }
 
+/* Laboratorio de responsividad con media queries */
+.responsive-lab{
+	margin:2.4rem 0 1rem;
+	padding:1.15rem;
+	border-radius:.75rem;
+	border:1px solid rgba(255,255,255,0.11);
+	background:linear-gradient(140deg, rgba(255,255,255,0.04), rgba(11,193,127,0.1));
+}
+.responsive-lab h2{
+	margin:0;
+	text-align:center;
+	color:#8ff7d5;
+	font-size:clamp(1.35rem, 2.8vw, 2rem);
+}
+.responsive-intro{
+	margin:.65rem auto 1rem;
+	max-width:760px;
+	text-align:center;
+	color:var(--muted);
+}
+.breakpoint-badge{
+	width:fit-content;
+	margin:0 auto 1rem;
+	padding:.38rem .7rem;
+	border-radius:999px;
+	font-size:.83rem;
+	background:rgba(143,247,213,0.15);
+	border:1px solid rgba(143,247,213,0.35);
+	color:#dffff3;
+}
+.viewport-label{color:#8ff7d5}
+.viewport-label::after{content:"Movil"}
+
+.responsive-grid{
+	display:grid;
+	grid-template-columns:1fr;
+	gap:.85rem;
+	margin-bottom:1rem;
+}
+.responsive-card{
+	padding:.9rem;
+	border-radius:.6rem;
+	background:rgba(10,18,44,0.72);
+	border:1px solid rgba(255,255,255,0.12);
+}
+.responsive-card h3{
+	margin:0 0 .45rem;
+	color:#d7fff1;
+	font-size:1.05rem;
+}
+.responsive-card p{margin:0;color:#d4e6ea}
+
+.responsive-nav-demo{
+	display:flex;
+	flex-direction:column;
+	gap:.55rem;
+}
+.responsive-nav-demo a{
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	padding:.65rem .75rem;
+	border-radius:.45rem;
+	background:rgba(143,247,213,0.14);
+	border:1px solid rgba(143,247,213,0.33);
+	color:#e9fff9;
+	font-weight:600;
+	transition:background .2s ease, transform .2s ease;
+}
+.responsive-nav-demo a:hover{
+	background:rgba(143,247,213,0.25);
+	transform:translateY(-1px);
+}
+
 /* Footer */
 .site-footer{
 	padding:1.5rem 0;
@@ -539,5 +613,21 @@ body{
 	.position-grid{grid-template-columns:1fr}
 	.layer-top{left:92px}
 	.floating-help{width:42px;height:42px;right:14px;bottom:14px}
+	.viewport-label::after{content:"Movil"}
+}
+
+@media (min-width:601px) and (max-width:960px){
+	.responsive-grid{grid-template-columns:repeat(2, minmax(220px, 1fr))}
+	.responsive-card:nth-child(3){grid-column:1 / -1}
+	.responsive-nav-demo{flex-direction:row;flex-wrap:wrap}
+	.responsive-nav-demo a{flex:1 1 calc(50% - .55rem)}
+	.viewport-label::after{content:"Tablet"}
+}
+
+@media (min-width:961px){
+	.responsive-grid{grid-template-columns:repeat(3, minmax(0, 1fr))}
+	.responsive-nav-demo{flex-direction:row}
+	.responsive-nav-demo a{flex:1 1 0}
+	.viewport-label::after{content:"Escritorio"}
 }
 
