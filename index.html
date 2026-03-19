@@ -57,21 +57,22 @@
 				<h2>Más ejemplos espaciales</h2>
 				<!-- Formulario con varios tipos de controles -->
 				<form class="signup-form">
-							<label>Nombre del astronauta:
-								<input type="text" name="name" placeholder="Tu nombre" />
-							</label>
-							<label>Email:
-								<input type="email" name="email" placeholder="astro@ejemplo.com" />
-							</label>
-							<label>Tipo de nave:
-								<select name="ship">
-									<option value="">Selecciona</option>
-									<option value="falcon">Falcon</option>
-									<option value="enterprise">Enterprise</option>
-									<option value="serenity">Serenity</option>
-								</select>
-							</label>
-							<button type="submit" class="btn">Enviar misión</button>
+					<label>Nombre del astronauta:
+						<input type="text" name="name" placeholder="Tu nombre" />
+					</label>
+					<label>Email:
+						<input type="email" name="email" placeholder="astro@ejemplo.com" />
+					</label>
+					<label>Tipo de nave:
+						<select name="ship">
+							<option value="">Selecciona</option>
+							<option value="falcon">Falcon</option>
+							<option value="enterprise">Enterprise</option>
+							<option value="serenity">Serenity</option>
+						</select>
+					</label>
+					<button type="submit" class="btn">Enviar misión</button>
+				</form>
 
 				<!-- Demostración de imagen con efectos y filtros -->
 				<div class="image-demo">
@@ -84,6 +85,41 @@
 					<li>Venus</li>
 					<li>Tierra</li>
 				</ul>
+			</section>
+
+			<!-- Sección práctica para alinear elementos con Flexbox -->
+			<section class="flex-alignment-lab">
+				<h2>Laboratorio de alineación con Flexbox</h2>
+				<p class="lab-intro">Compara cómo cambian la posición y distribución de los elementos con distintas combinaciones de propiedades.</p>
+
+				<div class="alignment-grid">
+					<article class="alignment-card">
+						<h3>justify-content: space-between</h3>
+						<div class="alignment-row jc-between">
+							<div class="chip">A</div>
+							<div class="chip">B</div>
+							<div class="chip">C</div>
+						</div>
+					</article>
+
+					<article class="alignment-card">
+						<h3>align-items: flex-end</h3>
+						<div class="alignment-row ai-end">
+							<div class="chip tall">A</div>
+							<div class="chip">B</div>
+							<div class="chip short">C</div>
+						</div>
+					</article>
+
+					<article class="alignment-card">
+						<h3>align-self + margen automático</h3>
+						<div class="alignment-row mixed-align">
+							<div class="chip">Inicio</div>
+							<div class="chip self-center">Centro</div>
+							<div class="chip push-right">Final</div>
+						</div>
+					</article>
+				</div>
 			</section>
 
 			<!-- Sección para demostrar herencia de estilos -->

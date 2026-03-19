@@ -125,6 +125,73 @@ body{
 	color:var(--muted);
 }
 
+/* Laboratorio Flexbox de alineacion */
+.flex-alignment-lab{
+	margin:2.5rem 0;
+	padding:1.25rem;
+	background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(3,169,244,0.08));
+	border:1px solid rgba(255,255,255,0.1);
+	border-radius:.75rem;
+}
+.flex-alignment-lab h2{
+	margin:0;
+	color:var(--accent);
+	text-align:center;
+}
+.lab-intro{
+	margin:.65rem 0 1.25rem;
+	text-align:center;
+	color:var(--muted);
+}
+.alignment-grid{
+	display:flex;
+	flex-wrap:wrap;
+	gap:1rem;
+}
+.alignment-card{
+	flex:1 1 280px;
+	background:rgba(12,18,46,0.7);
+	border:1px solid rgba(255,255,255,0.12);
+	border-radius:.6rem;
+	padding:1rem;
+}
+.alignment-card h3{
+	margin:0 0 .75rem;
+	font-size:1rem;
+	color:#d7e8ff;
+}
+.alignment-row{
+	display:flex;
+	min-height:96px;
+	padding:.5rem;
+	border:1px dashed rgba(255,255,255,0.18);
+	border-radius:.5rem;
+	gap:.5rem;
+	background:rgba(0,0,0,0.18);
+}
+.chip{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:56px;
+	height:56px;
+	border-radius:.55rem;
+	font-weight:700;
+	color:#041018;
+	background:linear-gradient(180deg, #7fd8ff, #03a9f4);
+	box-shadow:0 2px 10px rgba(3,169,244,0.35);
+}
+
+/* Variantes de alineacion */
+.jc-between{justify-content:space-between;align-items:center}
+.ai-end{align-items:flex-end;justify-content:flex-start}
+.mixed-align{align-items:flex-start}
+
+.tall{height:72px}
+.short{height:42px}
+.self-center{align-self:center}
+.push-right{margin-left:auto;align-self:flex-end}
+
 /* extras: formulario, imagen y lista */
 .extras{margin:2rem 0}
 .extras h2{text-align:center;margin-bottom:1rem;color:var(--accent)}
@@ -224,5 +291,7 @@ body{
 	.hero h2{font-size:1.5rem}
 	.header-inner{padding:0.75rem 0}
 	.main-nav a{margin-left:.6rem}
+	.alignment-row{min-height:86px}
+	.chip{width:50px;height:50px}
 }
 
