@@ -164,6 +164,45 @@
 				</div>
 			</section>
 
+			<!-- Sección práctica para posicionamiento con CSS -->
+			<section class="position-lab">
+				<h2>Laboratorio de posicionamiento con Position</h2>
+				<p class="position-intro">Explora cómo funcionan <code>relative</code>, <code>absolute</code>, <code>sticky</code>, <code>fixed</code> y <code>z-index</code> en escenarios reales.</p>
+
+				<div class="position-grid">
+					<article class="position-card">
+						<h3>relative + absolute</h3>
+						<div class="relative-stage">
+							<div class="absolute-tag">ABS</div>
+							<p>El contenedor usa <strong>position: relative</strong> y la etiqueta se posiciona con <strong>position: absolute</strong>.</p>
+						</div>
+					</article>
+
+					<article class="position-card">
+						<h3>Capas con z-index</h3>
+						<div class="layer-stack">
+							<div class="layer layer-back">Capa 1</div>
+							<div class="layer layer-mid">Capa 2</div>
+							<div class="layer layer-top">Capa 3</div>
+						</div>
+					</article>
+
+					<article class="position-card position-card-wide">
+						<h3>Encabezado sticky dentro de un panel</h3>
+						<div class="sticky-panel">
+							<div class="sticky-head">Bitácora de misión (sticky)</div>
+							<p>Minuto 01: Encendido de motores.</p>
+							<p>Minuto 08: Salida de atmósfera.</p>
+							<p>Minuto 12: Ajuste de trayectoria.</p>
+							<p>Minuto 19: Verificación de sistemas.</p>
+							<p>Minuto 27: Acople con estación orbital.</p>
+							<p>Minuto 34: Comunicación con base central.</p>
+							<p>Minuto 40: Fin de la demostración.</p>
+						</div>
+					</article>
+				</div>
+			</section>
+
 			<!-- Sección para demostrar herencia de estilos -->
 			<section class="inheritance">
 				<h2>Herencia de estilos</h2>
@@ -182,6 +221,8 @@
 				<p>© 2026 Universo • Hecho con ❤️</p>
 			</div>
 		</footer>
+
+		<a class="floating-help" href="#" aria-label="Atajo flotante de ejemplo">+</a>
 
 		<script>
 			(function () {
